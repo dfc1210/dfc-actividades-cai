@@ -33,6 +33,10 @@
             listView1 = new ListView();
             label2 = new Label();
             button1 = new Button();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             SuspendLayout();
             // 
             // label1
@@ -55,11 +59,13 @@
             // 
             // listView1
             // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             listView1.Location = new Point(12, 100);
             listView1.Name = "listView1";
             listView1.Size = new Size(578, 275);
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // label2
             // 
@@ -104,5 +110,9 @@
         private ListView listView1;
         private Label label2;
         private Button button1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
     }
 }
